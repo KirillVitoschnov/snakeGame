@@ -4,7 +4,8 @@ const ground = new Image();
 ground.src = "img/field.png"
 
 const foodImg = new Image();
-foodImg.src = "img/food1.png";
+var foodType = Math.floor((Math.random() * 10 + 1))
+foodImg.src = "img/food"+foodType+".png";
 let box = 32;
 let score = 0;
 let food = {
