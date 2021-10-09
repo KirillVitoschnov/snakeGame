@@ -51,39 +51,7 @@ function draw() {
     if (snakeX == food.x && snakeY == food.y) {
         score++
         var foodType = Math.floor((Math.random() * 10 + 1))
-        switch (foodType) {
-            case 1:
-                foodImg.src = "img/food1.png";
-                break
-            case 2:
-                foodImg.src = "img/food2.png";
-                break
-            case 3:
-                foodImg.src = "img/food3.png";
-                break
-            case 4:
-                foodImg.src = "img/food4.png";
-                break
-            case 5:
-                foodImg.src = "img/food5.png";
-                break
-            case 6:
-                foodImg.src = "img/food6.png";
-                break
-            case 7:
-                foodImg.src = "img/food7.png";
-                break
-            case 8:
-                foodImg.src = "img/food8.png";
-                break
-            case 9:
-                foodImg.src = "img/food9.png";
-                break
-            case 10:
-                foodImg.src = "img/food10.png";
-                break
-
-        }
+        foodImg.src = "img/food"+foodType+".png";
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box,
             y: Math.floor((Math.random() * 15 + 3)) * box,
