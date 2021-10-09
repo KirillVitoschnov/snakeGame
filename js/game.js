@@ -4,8 +4,7 @@ const ground = new Image();
 ground.src = "img/field.png"
 
 const foodImg = new Image();
-var foodType = Math.floor((Math.random() * 10 + 1))
-foodImg.src = "img/food"+foodType+".png";
+foodImg.src = "img/food"+Math.floor((Math.random() * 10 + 1))+".png";
 let box = 32;
 let score = 0;
 let food = {
@@ -51,8 +50,7 @@ function draw() {
     ctx.fillText(score, box * 2.5, box * 1.5);
     if (snakeX == food.x && snakeY == food.y) {
         score++
-        var foodType = Math.floor((Math.random() * 10 + 1))
-        foodImg.src = "img/food"+foodType+".png";
+        foodImg.src = "img/food"+Math.floor((Math.random() * 10 + 1))+".png";
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box,
             y: Math.floor((Math.random() * 15 + 3)) * box,
